@@ -1,0 +1,12 @@
+{
+  "name": "basecs",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu26.04",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/neovim-homebrew:1": {},
+    "ghcr.io/xavierbeheydt/devcontainer-extras/lazyvim:0": {},
+    "ghcr.io/devcontainer-community/devcontainer-features/lazygit:1": {},
+    "ghcr.io/devcontainers-extra/features/tmux-homebrew:1": {},
+    "ghcr.io/devcontainers/features/sshd:1": {}
+  },
+  "postCreateCommand": "if [ ! -f \"$HOME/.tmux.conf\" ]; then printf '%s\\n' 'set -as terminal-features \",*:RGB\"' >> \"$HOME/.tmux.conf\"; fi"
+}

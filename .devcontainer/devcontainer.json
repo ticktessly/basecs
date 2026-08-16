@@ -7,5 +7,5 @@
     "ghcr.io/devcontainers-extra/features/tmux-homebrew:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {}
   },
-  "postCreateCommand": "if [ ! -f \"$HOME/.tmux.conf\" ]; then printf '%s\\n' 'set -as terminal-features \",*:RGB\"' >> \"$HOME/.tmux.conf\"; fi"
+  "postCreateCommand": "if ! command -v lazygit >/dev/null 2>&1; then sudo apt-get update && sudo apt-get install -y lazygit; fi; if [ ! -f \"$HOME/.tmux.conf\" ]; then printf '%s\\n' 'set -as terminal-features \",*:RGB\"' >> \"$HOME/.tmux.conf\"; fi"
 }

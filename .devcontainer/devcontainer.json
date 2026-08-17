@@ -2,7 +2,7 @@
   "name": "basecs",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu26.04",
   "features": {
-    "ghcr.io/devcontainers/features/homebrew:1": {},
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
     "ghcr.io/devcontainers/features/sshd:1": {}
   },
   "postCreateCommand": "brew install neovim herdr && git clone https://github.com/ticktessly/nvim ~/.config/nvim"
